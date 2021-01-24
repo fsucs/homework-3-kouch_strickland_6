@@ -6,10 +6,18 @@
 #include <iomanip>
 #include <iostream>
 
-Point3D::Point3D(double x, double y, double z)
+void Point3D::SetX(double x)
 {
     XCoord = x;
+}
+
+void Point3D::SetY(double y)
+{
     YCoord = y;
+}
+
+void Point3D::SetZ(double Z)
+{
     ZCoord = z;
 }
 

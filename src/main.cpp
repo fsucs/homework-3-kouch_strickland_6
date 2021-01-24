@@ -19,13 +19,33 @@ using namespace std;
 int main() {
 
     Point3D a1, a2;
+    int n;
+    double x,y,z;
     ifstream infile;
 
     infile.open("test.sh");
 
     if(infile.is_open())
     {
-        getline(infile, a1.Set)
+        infile >> x >> y >> z;
+        a1.SetX(x);
+        a1.SetY(y);
+        a1.SetZ(z);
+
+        infile >> x >> y >> z;
+        a2.SetX(x);
+        a2.SetY(y);
+        a2.SetZ(z);
+
+        infile >> n;
+        Point3D sat[n];
+        for(int i = 0; i < n; i++)
+        {
+            infile >> x >> y >> z;
+            sat[i].SetX(x);
+            sat[i].SetY(y);
+            sat[i].SetZ(z);
+        }
     }
 
     infile.close();

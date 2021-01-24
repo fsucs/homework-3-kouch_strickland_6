@@ -10,9 +10,10 @@ class Point3D{
 public:
 
     Point3D();
-    Point3D(double x, double y, double z);
 
-    void SetCoordinates(double x, double y, double z);
+    void SetX(double x);
+    void SetY(double y);
+    void SetZ(double z);
 
     double Distance(const Point3D& point2) const;
 

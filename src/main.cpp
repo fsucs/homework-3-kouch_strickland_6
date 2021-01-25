@@ -11,7 +11,7 @@
     Requires: C++11
 */
 
-#include "point3D.hpp"
+#include "../include/point3d.hpp"
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -23,7 +23,7 @@ int main() {
     double x,y,z;
     ifstream infile;
 
-    infile.open("test.sh");
+    infile.open("101.in");
 
     if(infile.is_open())
     {

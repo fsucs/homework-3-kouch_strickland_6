@@ -11,7 +11,7 @@
     Requires: C++11
 */
 
-# include "Point3D.hpp"
+# include "point3D.hpp"
 #include <iostream>
 #include <fstream>
 using namespace std;

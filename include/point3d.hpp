@@ -17,9 +17,9 @@ public:
 
     double Distance(const Point3D& point2) const;
 
-    void GetXCoord();
-    void GetYCoord();
-    void GetZCoord();
+    double GetXCoord();
+    double GetYCoord();
+    double GetZCoord();
 
 private:
 

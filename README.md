@@ -1,12 +1,10 @@
 Getting Started
 ===============
 
-Please update this README file to showcase about this project. There is no specific format for README file, but you should tell about your overall project works and how can anyone will run your code.
-
-
 Installation and RUN
 
-Please specify, How to run this project?
+This program will find the amount of time it takes to send a message between two astronauts in space using satellites.
+The user will be prompted for the coordinates of each astronaut, how many satellites there are, and the coordinates of each satellite.
 
 Documentation
 =============

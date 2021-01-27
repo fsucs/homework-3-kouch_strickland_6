@@ -13,47 +13,57 @@
 
 #include "../include/point3d.hpp"
 #include <iostream>
-#include <fstream>
 #include <iomanip>
 using namespace std;
+
+double Time(double d);
 
 int main() {
 
     Point3D a1, a2;
-    int n;
+    int n, SatNum1, SatNum2;
     double x,y,z;
-    ifstream infile;
+    double distance, a1Dist = 0.0000, a2Dist = 0.0000;
 
-    infile.open("");
-
-    if(infile.is_open())
-    {
         cout << fixed << setprecision(4);
 
-        infile >> x >> y >> z;
-        a1.SetX(x);
-        a1.SetY(y);
-        a1.SetZ(z);
+        cin >> x >> y >> z;
+        a1.SetCoords(x,y,z);
 
-        infile >> x >> y >> z;
-        a2.SetX(x);
-        a2.SetY(y);
-        a2.SetZ(z);
+        cin >> x >> y >> z;
+        a2.SetCoords(x,y,z);
 
-        infile >> n;
+        cin >> n;
         Point3D sat[n];
 
         for(int i = 0; i < n; i++)
         {
-            infile >> x >> y >> z;
-            sat[i].SetX(x);
-            sat[i].SetY(y);
-            sat[i].SetZ(z);
+            cin >> x >> y >> z;
+            sat[i].SetCoords(x,y,z);
+        }
+
+    for(int i = 0; i < n; i++)
+    {
+        if(a1.DistanceTo(sat[i]) < a1Dist || a1Dist == 0)
+        {
+            a1Dist = a1.DistanceTo(sat[i]);
+            SatNum1 = i;
+        }
+        if(a2.DistanceTo(sat[i]) < a2Dist || a2Dist == 0)
+        {
+            a2Dist = a2.DistanceTo(sat[i]);
+            SatNum2 = i;
         }
     }
+    
+    distance = a1Dist + a2Dist + (sat[SatNum1].DistanceTo(sat[SatNum2]));
+    
+    cout << Time(distance) << endl;
 
-
-
-    infile.close();
     return 0;
+}
+
+double Time(double d)
+{
+    return d/299792458.0000;
 }

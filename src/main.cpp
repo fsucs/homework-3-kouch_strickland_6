@@ -44,12 +44,12 @@ int main() {
 
     for(int i = 0; i < n; i++)
     {
-        if(a1.DistanceTo(sat[i]) < a1Dist || a1Dist == 0)
+        if(a1.DistanceTo(sat[i]) < a1Dist || a1Dist == 0.0000)
         {
             a1Dist = a1.DistanceTo(sat[i]);
             SatNum1 = i;
         }
-        if(a2.DistanceTo(sat[i]) < a2Dist || a2Dist == 0)
+        if(a2.DistanceTo(sat[i]) < a2Dist || a2Dist == 0.0000)
         {
             a2Dist = a2.DistanceTo(sat[i]);
             SatNum2 = i;

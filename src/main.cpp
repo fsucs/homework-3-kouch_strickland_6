@@ -14,6 +14,7 @@
 #include "../include/point3d.hpp"
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -23,10 +24,12 @@ int main() {
     double x,y,z;
     ifstream infile;
 
-    infile.open("101.in");
+    infile.open("");
 
     if(infile.is_open())
     {
+        cout << fixed << setprecision(4);
+
         infile >> x >> y >> z;
         a1.SetX(x);
         a1.SetY(y);
@@ -39,6 +42,7 @@ int main() {
 
         infile >> n;
         Point3D sat[n];
+
         for(int i = 0; i < n; i++)
         {
             infile >> x >> y >> z;
@@ -47,6 +51,8 @@ int main() {
             sat[i].SetZ(z);
         }
     }
+
+
 
     infile.close();
     return 0;

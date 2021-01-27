@@ -3,48 +3,46 @@
  */
 
 #include "../include/point3d.hpp"
-#include <iomanip>
 #include <iostream>
 #include <cmath>
 
 Point3D::Point3D()
 {
-    XCoord = 0.0;
-    YCoord = 0.0;
-    ZCoord = 0.0;
-}
-	
-void Point3D::SetX(double x)
-{
-    XCoord = x;
+    X = 0.0;
+    Y = 0.0;
+    Z = 0.0;
 }
 
-void Point3D::SetY(double y)
+Point3D::Point3D(double x, double y, double z)
 {
-    YCoord = y;
+    X = x;
+    Y = y;
+    Z = z;
 }
 
-void Point3D::SetZ(double z)
+void Point3D::SetCoords(double x, double y, double z)
 {
-    ZCoord = z;
+    X = x;
+    Y = y;
+    Z = z;
 }
 
-double Point3D::GetXCoord()
+double Point3D::GetX()
 {
-    return XCoord;
+    return X;
 }
 
-double Point3D::GetYCoord()
+double Point3D::GetY()
 {
-    return YCoord;
+    return Y;
 }
 
-double Point3D::GetZCoord()
+double Point3D::GetZ()
 {
-    return ZCoord;
+    return Z;
 }
 
-double Point3D::Distance(const Point3D& point2) const
+double Point3D::DistanceTo(const Point3D& p) const
 {
-    return sqrt(pow(XCoord - point2.GetXCoord(),2) + pow(YCoord - point2.GetYCoord(),2) + pow(ZCoord - point2.GetZCoord(),2));
+    return sqrt(pow(X - p.GetX(),2) + pow(Y - p.GetY(),2) + pow(Z - p.GetZ(),2));
 }

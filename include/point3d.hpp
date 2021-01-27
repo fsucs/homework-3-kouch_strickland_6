@@ -14,11 +14,11 @@ public:
 
     void SetCoords(double x, double y, double z);
 
-    double DistanceTo(const Point3D& p) const;
+    double DistanceTo(const Point3D p) const;
 
-    double GetX();
-    double GetY();
-    double GetZ();
+    double GetX() const;
+    double GetY() const;
+    double GetZ() const;
 
 private:
 

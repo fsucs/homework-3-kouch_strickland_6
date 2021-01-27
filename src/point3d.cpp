@@ -27,22 +27,22 @@ void Point3D::SetCoords(double x, double y, double z)
     Z = z;
 }
 
-double Point3D::GetX()
+double Point3D::GetX() const
 {
     return X;
 }
 
-double Point3D::GetY()
+double Point3D::GetY() const
 {
     return Y;
 }
 
-double Point3D::GetZ()
+double Point3D::GetZ() const
 {
     return Z;
 }
 
-double Point3D::DistanceTo(const Point3D& p) const
+double Point3D::DistanceTo(const Point3D p) const
 {
     return sqrt(pow(X - p.GetX(),2) + pow(Y - p.GetY(),2) + pow(Z - p.GetZ(),2));
 }

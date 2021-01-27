@@ -5,6 +5,7 @@
 #include "../include/point3d.hpp"
 #include <iomanip>
 #include <iostream>
+#include <cmath>
 
 Point3D::Point3D()
 {
@@ -41,4 +42,9 @@ double Point3D::GetYCoord()
 double Point3D::GetZCoord()
 {
     return ZCoord;
+}
+
+double Point3D::Distance(const Point3D& point2) const
+{
+    return sqrt(pow(XCoord - point2.GetXCoord(),2) + pow(YCoord - point2.GetYCoord(),2) + pow(ZCoord - point2.GetZCoord(),2));
 }

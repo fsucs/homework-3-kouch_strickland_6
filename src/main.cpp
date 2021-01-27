@@ -25,8 +25,6 @@ int main() {
     double x,y,z;
     double distance, a1Dist = 0.0000, a2Dist = 0.0000;
 
-        cout << fixed << setprecision(4);
-
         cin >> x >> y >> z;
         a1.SetCoords(x,y,z);
 
@@ -58,7 +56,7 @@ int main() {
     
     distance = a1Dist + a2Dist + (sat[SatNum1].DistanceTo(sat[SatNum2]));
     
-    cout << Time(distance) << endl;
+    cout << fixed << setprecision(4) << Time(distance) << endl;
 
     return 0;
 }

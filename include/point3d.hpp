@@ -10,21 +10,20 @@ class Point3D{
 public:
 
     Point3D();
+    Point3D(double x, double y, double z);
 
-    void SetX(double x);
-    void SetY(double y);
-    void SetZ(double z);
+    void SetCoords(double x, double y, double z);
 
-    double Distance(const Point3D& point2) const;
+    double DistanceTo(const Point3D& p) const;
 
-    double GetXCoord();
-    double GetYCoord();
-    double GetZCoord();
+    double GetX();
+    double GetY();
+    double GetZ();
 
 private:
 
-    double XCoord;
-    double YCoord;
-    double ZCoord;
+    double X;
+    double Y;
+    double Z;
 };
 #endif

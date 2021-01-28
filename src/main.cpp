@@ -1,13 +1,16 @@
 /** 
     @mainpage Outer Space Communications
-    @author Author
-    What does this program do in short? Perhaps the name of the project goes here?
+    @author Travis Strickland and Kennyth Kouch
+	
+    This program calculates the amount of time it takes to 
+	transfer a message between two astronauts using satellites.
 */
 
 /** \file main.cpp
     \brief The code to solve the problem should be inside main.cpp
     
-    Long explination goes here...
+    The user will be prompted to enter the coordinates of two astronauts, how many satellites there are, and the coordinates of those satellites.
+	The program will then calculate a distance based off of the inputted data, and calculate a time based off of the distance.
     Requires: C++11
 */
 
